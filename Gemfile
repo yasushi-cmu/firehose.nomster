@@ -13,6 +13,9 @@ gem 'sass-rails', '~> 4.0.0'
 # use boot strap
 gem 'bootstrap-sass', '~>3.1.1'
 
+# Use Kaminari
+gem 'kaminari'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 

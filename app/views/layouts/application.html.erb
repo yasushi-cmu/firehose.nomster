@@ -35,7 +35,16 @@
   </div><!-- /.container-fluid -->
 </nav>
 
+
 <%= yield %>
 
+<div>
+<p>
+<%= paginate @places %>
+</p>
+</div>
+
 </body>
+
+
 </html>
