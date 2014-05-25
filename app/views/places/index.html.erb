@@ -1,11 +1,22 @@
-<% @places.each do |place| %>
 
-<div class="booyah-box col-xs-10 col-xs-offset-1">
-	<h1><%= place.name %></h1>
-	<i><%= place.address %></i><br />
-	<p><%= place.description %></p><br />
+<div>
+	<% @places.each do |place| %>
+
+	<div class="booyah-box col-xs-10 col-xs-offset-1">
+		<h1><%= place.name %></h1>
+		<i><%= place.address %></i><br />
+		<p><%= place.description %></p><br />
+	</div>
+	<% end %>
 </div>
 
 
-<% end %>
+
+<div class="text-center">
+
+	<%= paginate @places %>
+
+</div>
+
+
 
