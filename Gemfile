@@ -19,6 +19,10 @@ gem 'kaminari'
 
 gem 'devise'
 
+gem 'geocoder'
+
+gem "figaro"
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 
