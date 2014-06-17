@@ -5,6 +5,9 @@
 	<p><%= @place.description %></p>
 
 	<% @place.photos.each do |photo| %>
+		    	<%= image_tag photo.picture, :class => 'img-responsive' %>
+<!--		    	<%= image_tag photo.picture %>
+-->
 		    <blockquote>
 		        <b><%= photo.caption %>
 		    </blockquote>
@@ -85,6 +88,7 @@
 
 	    <%= simple_form_for @photo, :url => place_photos_path(@place) do |f| %>
      	  <div class="modal-body">
+     	  	<%= f.input :picture %>
 			<%= f.input :caption %>
     	  </div>
 
