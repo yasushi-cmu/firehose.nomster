@@ -28,6 +28,7 @@ class PictureUploader < CarrierWave::Uploader::Base
   #process :scale => [200, 300]
   
 process :resize_to_fit => [460, 350]
+process :strip
 
   # def scale(width, height)
   #   # do something
@@ -49,5 +50,13 @@ process :resize_to_fit => [460, 350]
   # def filename
   #   "something.jpg" if original_filename
   # end
+
+  def strip
+    manipulate! do |photo|
+      photo.strip
+      photo = yield(photo) if block_given?
+      photo
+    end
+  end
 
 end
